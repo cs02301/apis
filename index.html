@@ -4,39 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conversor de Divisas</title>
+
+  <!-- Fuente de Google (Poppins) -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  
+  <!-- Vinculamos nuestro CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Conversor de Divisas</h1>
-    <div class="form-group">
-      <label for="amountInput">Cantidad:</label>
-      <input type="number" id="amountInput" placeholder="Ingresa la cantidad" />
-    </div>
+  <header class="header">
+    <h1 class="title">Conversor de Divisas</h1>
+  </header>
+  
+  <main class="container">
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group">
+          <label for="amountInput">Cantidad:</label>
+          <input type="number" id="amountInput" placeholder="Ingresa la cantidad" />
+        </div>
 
-    <div class="form-group">
-      <label for="fromCurrency">De:</label>
-      <select id="fromCurrency">
-        <option value="USD">USD - Dólar Estadounidense</option>
-        <option value="EUR">EUR - Euro</option>
-        <option value="COP">COP - Peso Colombiano</option>
-        <!-- Agrega más opciones según necesites -->
-      </select>
-    </div>
+        <div class="form-group">
+          <label for="fromCurrency">De:</label>
+          <select id="fromCurrency">
+            <option value="USD">USD - Dólar Estadounidense</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="COP">COP - Peso Colombiano</option>
+            <!-- Agrega más opciones según necesites -->
+          </select>
+        </div>
 
-    <div class="form-group">
-      <label for="toCurrency">A:</label>
-      <select id="toCurrency">
-        <option value="COP">COP - Peso Colombiano</option>
-        <option value="USD">USD - Dólar Estadounidense</option>
-        <option value="EUR">EUR - Euro</option>
-        <!-- Agrega más opciones según necesites -->
-      </select>
-    </div>
+        <div class="form-group">
+          <label for="toCurrency">A:</label>
+          <select id="toCurrency">
+            <option value="COP">COP - Peso Colombiano</option>
+            <option value="USD">USD - Dólar Estadounidense</option>
+            <option value="EUR">EUR - Euro</option>
+            <!-- Agrega más opciones según necesites -->
+          </select>
+        </div>
 
-    <button id="convertBtn">Convertir</button>
-    <div id="result"></div>
-  </div>
+        <button id="convertBtn" class="btn">Convertir</button>
+        <div id="result" class="result"></div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <p>Desarrollado con <span>♥</span> usando ExchangeRate-API</p>
+  </footer>
+
+  <!-- Script principal -->
   <script src="app.js"></script>
 </body>
 </html>
